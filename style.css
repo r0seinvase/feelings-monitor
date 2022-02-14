@@ -23,13 +23,15 @@ body {
 
 .new-feelings-line {
     display: flex;
-    justify-content: center;
+    justify-content: auto;
+    ;
 }
 
 #venting {
     resize: none;
-    border: 1px solid;
-    border-radius: 33%;
+    border: 3px solid;
+    top: 50%;
+    left: 50%;
 }
 
 #vent-input-container {

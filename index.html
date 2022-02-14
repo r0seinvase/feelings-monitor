@@ -8,45 +8,46 @@
     <script defer src='index.js'></script>
     <title>Feelings</title>
 </head>
-<body>
+<body style = "background-color:pink;">
     <div id='container'>
+        <div style = "position:relative; left:400px; top:150px; background-color:pink;">
         <div class="feelings-card">
-            <div class="card-title">Feelings Monitor</div>
+            <div class="card-title"style = "position:relative; top:-20px; left:60px; font-size:70px; font-family: 'Brush Script MT', cursive;">Feelings Monitor</div>
             <form id="feelings-form">
-                <div class="new-feelings-line">
+                <div class="new-feelings-line" style = "position:relative; top:70px; left:200px; font-size:20px;">
                     <input class="feelings-button" type="radio" id="happy" name="feeling" value="happy">
                     <label for="happy">HAPPY</label>
-                    <div id="form-emoji">:)</div>
                 </div>
-                <div class="new-feelings-line">
+                <div class="new-feelings-line" style = "position:relative; top:80px; left:120px; font-size:20px;">
                     <input class="feelings-button" type="radio" id="angry" name="feeling" value="angry">
                     <label for="angry">ANGRY</label>
                     <input class="feelings-button" type="radio" id="sad" name="feeling" value="sad">
                     <label for="sad">SAD</label>
-                    <input class="feelings-button" type="radio" id="disgusted" name="feeling" value="disgusted">
+                    <input class="feelings-button" type="radio" id="disgusted" name="feeling" value="disgusted" >
                     <label for="disgusted">DISGUSTED</label>
                 </div>
-                <div class="new-feelings-line">
+                <div class="new-feelings-line"style = "position:relative; top:90px; left:140px; font-size:20px;">
                     <input class="feelings-button" type="radio" id="surprised" name="feeling" value="surprised">
                     <label for="surprised">SURPRISED</label>
                     <input class="feelings-button" type="radio" id="excited" name="feeling" value="excited">
                     <label for="excited">EXCITED</label>
                 </div>
-                <div class="new-feelings-line">
+                <div class="new-feelings-line" style = "position:relative; top:100px; left:200px; font-size:20px;">
                     <input class="feelings-button" type="radio" id="fearful" name="feeling" value="fearful">
                     <label for="fearful">FEARFUL</label>
                 </div>
-                <div class="new-feelings-line">
-                    <div id="vent-input-container">
-                        <label for="venting">Vent Here:</label>
-                        <div id="vent-speech-bubble">
-                            <textarea name="venting" id="venting" cols="30" rows="2"></textarea>
+                <div class="new-feelings-line" style = "position:relative; top:80px; white-space: nowrap;">
+                    <div id="vent-input-container"  style = "position:relative; top:100px;">
+                        <label for="venting" style="font-size:30px; position:relative; right:30px;">Vent Here:</label>
+                        <div id="comment-box" style="display: flexbox;">
+                            <textarea name="venting" id="venting" cols="30" rows="3" placeholder="All Ears..."></textarea>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Pour Your Heart Out">
+                <input type="submit" value="Pour Your Heart Out" style = "position:relative; top:140px; left:430px;">
             </form>
         </div>
+     </div>
     </div>
 </body>
 </html>
