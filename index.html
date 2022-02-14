@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src='index.js'></script>
+    <title>Feelings</title>
 </head>
 <body>
-    
+    <div id='container'>
+        <div class="feelings-card">
+            <div class="card-title">Feelings Monitor</div>
+            <form id="feelings-form">
+                <div class="new-feelings-line">
+                    <input class="feelings-button" type="radio" id="happy" name="feeling" value="happy">
+                    <label for="happy">HAPPY</label>
+                    <div id="form-emoji">:)</div>
+                </div>
+                <div class="new-feelings-line">
+                    <input class="feelings-button" type="radio" id="angry" name="feeling" value="angry">
+                    <label for="angry">ANGRY</label>
+                    <input class="feelings-button" type="radio" id="sad" name="feeling" value="sad">
+                    <label for="sad">SAD</label>
+                    <input class="feelings-button" type="radio" id="disgusted" name="feeling" value="disgusted">
+                    <label for="disgusted">DISGUSTED</label>
+                </div>
+                <div class="new-feelings-line">
+                    <input class="feelings-button" type="radio" id="surprised" name="feeling" value="surprised">
+                    <label for="surprised">SURPRISED</label>
+                    <input class="feelings-button" type="radio" id="excited" name="feeling" value="excited">
+                    <label for="excited">EXCITED</label>
+                </div>
+                <div class="new-feelings-line">
+                    <input class="feelings-button" type="radio" id="fearful" name="feeling" value="fearful">
+                    <label for="fearful">FEARFUL</label>
+                </div>
+                <div class="new-feelings-line">
+                    <div id="vent-input-container">
+                        <label for="venting">Vent Here:</label>
+                        <div id="vent-speech-bubble">
+                            <textarea name="venting" id="venting" cols="30" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Pour Your Heart Out">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
