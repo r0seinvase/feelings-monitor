@@ -18,7 +18,7 @@ Was Hercules ever like "Yo, I don't wanna fight Cerberus"?
 Under the surface
 I'm pretty sure I'm worthless if I can't be of service
 
-poerty by : 
+poerty by : your mum
 
 chapter-4
 
