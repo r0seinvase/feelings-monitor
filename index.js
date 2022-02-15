@@ -54,17 +54,6 @@ const populateEmojiSpace = async (face) => {
   
 populateEmojiSpace(neutralFace);
 
-// create event listeners for feelings selection
-
-// const happyButton = document.getElementById('happy');
-// const angryButton = document.getElementById('angry');
-// const sadButton = document.getElementById('sad');
-// const disgustedButton = document.getElementById('disgusted');
-// const surprisedButton = document.getElementById('surprised');
-// const excitedButton = document.getElementById('excited');
-// const fearfulButton = document.getElementById('fearful');
-// console.log(fearfulButton);
-
 const emotionButtons = document.querySelectorAll('.feelings-button');
 emotionButtons.forEach(emotionButton => {
     emotionButton.addEventListener('change', () => {
@@ -74,71 +63,3 @@ emotionButtons.forEach(emotionButton => {
         populateEmojiSpace(emojiReference[emotionButton.value]);
     })
 })
-
-// })
-
-// happyButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(happyFace)
-//     console.log(happyFace);
-// });
-// angryButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(angryFace)
-//     console.log(angryFace);
-// });
-// sadButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(sadFace)
-//     console.log(sadFace);
-// });
-// disgustedButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(disgustedFace)
-//     console.log(disgustedFace);
-// });
-// surprisedButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(surprisedFace)
-//     console.log(surprisedFace);
-// });
-// excitedButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(excitedFace)
-//     console.log(excitedFace);
-// });
-// fearfulButton.addEventListener('mouseover', function(event){
-//     populateEmojiSpace(fearfulFace)
-//     console.log(fearfulFace);
-// });
-
-
-
-// happyButton.addEventListener('change', () => {
-//     console.log('i selected happy');
-//     populateEmojiSpace(happyFace);
-// });
-
-// angryButton.addEventListener('change', () => {
-//     console.log('i selected angry');
-//     populateEmojiSpace(angryFace);
-// });
-
-// sadButton.addEventListener('change', () => {
-//     console.log('i selected sad');
-//     populateEmojiSpace(sadFace);
-// });
-
-// disgusted.addEventListener('change', () => {
-//     console.log('i selected disgusted');
-//     populateEmojiSpace(disgustedFace);
-// });
-
-// surprisedButton.addEventListener('change', () => {
-//     console.log('i selected surprised');
-//     populateEmojiSpace(surprisedFace);
-// });
-
-// excitedButton.addEventListener('change', () => {
-//     console.log('i selected excited');
-//     populateEmojiSpace(excitedFace);
-// });
-
-// fearfulButton.addEventListener('change', () => {
-//     console.log('i selected fearful');
-//     populateEmojiSpace(fearfulFace);
-// });
