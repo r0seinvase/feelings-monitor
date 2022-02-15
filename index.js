@@ -72,7 +72,7 @@ const makeCard = async (face, comment) => {
     const container = document.createElement('div')
     const ventingSubmit = document.createElement('p')
     const surpriseNode =document.createElement('p')
-    const a = await face;
+    const a = await emojiReference[face];
     
     surpriseNode.textContent = a;
         ventingSubmit.textContent = comment
@@ -90,17 +90,12 @@ feelingsForm.addEventListener('submit', function(e){
 
     const alongFace = document.querySelector('input[name="feeling"]:checked').value;
 
-        if (alongFace === 'surprised') { 
-
-            makeCard (surprisedFace, ventingInput);
-
-        
-
-        }
-
+makeCard(alongFace, ventingInput)
 
 console.log(alongFace)
 
 document.body.appendChild(container)
+
+e.target.reset()
 
 })
