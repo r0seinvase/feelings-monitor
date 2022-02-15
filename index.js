@@ -32,6 +32,8 @@ const neutralFace = fetch('https://emoji-api.com/emojis/face-without-mouth?acces
     .then(response => response.json())
     .then(data => data[0].character);
 
+
+
 // had some error with the cloud url, i think    
 // const cloudFace = fetch('https://emoji-api.com/emojis/face-in-clouds?access_key=8bb25ebd0a3a427ee5afe3f9222517ed85c84920')
 //     .then(response => response.json())
@@ -60,6 +62,37 @@ const disgustedButton = document.getElementById('disgusted');
 const surprisedButton = document.getElementById('surprised');
 const excitedButton = document.getElementById('excited');
 const fearfulButton = document.getElementById('fearful');
+
+happyButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(happyFace)
+    console.log(happyFace);
+});
+angryButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(angryFace)
+    console.log(angryFace);
+});
+sadButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(sadFace)
+    console.log(sadFace);
+});
+disgustedButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(disgustedFace)
+    console.log(disgustedFace);
+});
+surprisedButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(surprisedFace)
+    console.log(surprisedFace);
+});
+excitedButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(excitedFace)
+    console.log(excitedFace);
+});
+fearfulButton.addEventListener('mouseover', function(event){
+    populateEmojiSpace(fearfulFace)
+    console.log(fearfulFace);
+});
+
+
 
 happyButton.addEventListener('change', () => {
     console.log('i selected happy');
