@@ -53,6 +53,7 @@ const populateEmojiSpace = async (face) => {
   
 populateEmojiSpace(neutralFace);
 
+
 // create event listeners for feelings selection
 
 const happyButton = document.getElementById('happy');
@@ -128,3 +129,44 @@ fearfulButton.addEventListener('change', () => {
     console.log('i selected fearful');
     populateEmojiSpace(fearfulFace);
 });
+
+const feelingsForm = document.getElementById('feelings-form')
+
+const makeCard = async (face, comment) => {
+    const container = document.createElement('div')
+    const ventingSubmit = document.createElement('p')
+    const surpriseNode =document.createElement('p')
+    const a = await face;
+    
+    surpriseNode.textContent = a;
+        ventingSubmit.textContent = comment
+    container.appendChild(ventingSubmit)
+            container.appendChild(surpriseNode)
+            document.body.appendChild(container)
+
+};
+
+feelingsForm.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    const ventingInput = document.getElementById('venting').value
+
+
+    const alongFace = document.querySelector('input[name="feeling"]:checked').value;
+
+        if (alongFace === 'surprised') { 
+
+            makeCard (surprisedFace, ventingInput);
+
+        
+
+        }
+
+
+console.log(alongFace)
+
+document.body.appendChild(container)
+
+})
+
+
