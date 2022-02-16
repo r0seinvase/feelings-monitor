@@ -26,6 +26,7 @@
       "id": 5
     },
     {
+<<<<<<< HEAD
       "emoji": "happy",
       "vent": "yis",
       "id": 6
@@ -34,6 +35,11 @@
       "emoji": "happy",
       "vent": "güd",
       "id": 7
+=======
+      "emoji": "disgusted",
+      "vent": "even more feeling",
+      "id": 6
+>>>>>>> 0405545b171a022b29cb92b900b87cdd1b7f1235
     }
   ]
 }
