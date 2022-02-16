@@ -10,12 +10,13 @@ body::-webkit-scrollbar {
 }
 
 #container {
-    width: 85%;
+    width: 100%;
     margin: 35px auto;
+    display: flex;
+
 }
 
 .feelings-card {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,16 +40,42 @@ body::-webkit-scrollbar {
 
 #venting {
     resize: none;
-    border: 3px solid;
+    border: 2px solid;
     top: 50%;
     left: 50%;
-    text-align: center;
+    padding-top: 5px;
+    padding-left: 8px;
+    font-size: 16px;
 }
 
 #vent-input-container {
     display: flex;
     align-items: center;
     text-align:center;
+}
+
+#new-feelings{
+    padding: 10px 0 0 20px;
+    width: 33%;
+}
+
+.new-feeling-card{
+    border-left: 13px solid transparent;
+    display: flex;
+    padding-bottom: 31px;
+    border-bottom: 1px solid black;
+    border-right: 101px solid transparent;
+    margin-top: 28px;
+}
+
+
+.card-emoji {
+    font-size: 50px;
+}
+
+.card-comment {
+    padding-left: 10px;
+    padding-top: 14px;
 }
 
 /* width: 0; 
