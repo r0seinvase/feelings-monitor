@@ -24,6 +24,11 @@
       "emoji": "angry",
       "vent": "yet another feeling",
       "id": 5
+    },
+    {
+      "emoji": "disgusted",
+      "vent": "even more feeling",
+      "id": 6
     }
   ]
 }
