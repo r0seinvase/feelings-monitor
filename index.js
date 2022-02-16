@@ -54,6 +54,14 @@ const populateEmojiSpace = async (face) => {
   
 populateEmojiSpace(neutralFace);
 
+fetch('http://localhost:3000/feelings')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(e => {
+            makeCard(e.emoji, e.vent);
+        })
+    });
+
 
 const emotionButtons = document.querySelectorAll('.feelings-button');
 emotionButtons.forEach(emotionButton => {
@@ -87,15 +95,36 @@ feelingsForm.addEventListener('submit', function(e){
 
     const ventingInput = document.getElementById('venting').value
 
-
     const alongFace = document.querySelector('input[name="feeling"]:checked').value;
 
-makeCard(alongFace, ventingInput)
 
-console.log(alongFace)
+    makeCard(alongFace, ventingInput)
 
-document.body.appendChild(container)
+    console.log(alongFace)
 
-e.target.reset()
+    document.body.appendChild(container)
+
+    function storeCardInfo() {
+        const dbURL = 'http://localhost:3000/feelings'
+        const cardInfo = {
+            'emoji': alongFace,
+            'vent': ventingInput,
+        }
+        const configObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify(cardInfo),
+        }
+
+        fetch(dbURL, configObj);
+
+    }
+
+    storeCardInfo();
+
+    e.target.reset();
 
 })
