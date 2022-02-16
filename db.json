@@ -24,6 +24,16 @@
       "emoji": "angry",
       "vent": "yet another feeling",
       "id": 5
+    },
+    {
+      "emoji": "happy",
+      "vent": "yis",
+      "id": 6
+    },
+    {
+      "emoji": "happy",
+      "vent": "güd",
+      "id": 7
     }
   ]
 }
