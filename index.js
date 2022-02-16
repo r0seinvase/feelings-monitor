@@ -78,8 +78,35 @@ const feelingsForm = document.getElementById('feelings-form')
 
 const makeCard = async (face, comment) => {
 
+
+    const container = document.createElement('div')
+    const ventingSubmit = document.createElement('p')
+    const surpriseNode =document.createElement('p')
     const a = await emojiReference[face];
     
+    surpriseNode.textContent = a;
+        ventingSubmit.textContent = comment
+    container.appendChild(ventingSubmit)
+            container.appendChild(surpriseNode)
+            document.body.appendChild(container)
+
+};
+
+feelingsForm.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    const ventingInput = document.getElementById('venting').value
+
+
+    const alongFace = document.querySelector('input[name="feeling"]:checked').value;
+
+makeCard(alongFace, ventingInput)
+e.target.reset()
+
+
+    const a = await emojiReference[face];
+    
+
     const container = document.querySelector('#new-feelings');
     
     const newCard = document.createElement('div');
@@ -99,6 +126,9 @@ const makeCard = async (face, comment) => {
     newCard.append(emojiNode, commentContainer);
 
     container.appendChild(newCard);
+
+});
+
 
 };
 
@@ -137,5 +167,6 @@ feelingsForm.addEventListener('submit', function(e){
     storeCardInfo();
 
     e.target.reset();
+
 
 })
