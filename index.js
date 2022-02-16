@@ -54,6 +54,14 @@ const populateEmojiSpace = async (face) => {
   
 populateEmojiSpace(neutralFace);
 
+fetch('http://localhost:3000/feelings')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(e => {
+            makeCard(e.emoji, e.vent);
+        })
+    });
+
 
 const emotionButtons = document.querySelectorAll('.feelings-button');
 emotionButtons.forEach(emotionButton => {
@@ -69,6 +77,7 @@ emotionButtons.forEach(emotionButton => {
 const feelingsForm = document.getElementById('feelings-form')
 
 const makeCard = async (face, comment) => {
+
 
     const container = document.createElement('div')
     const ventingSubmit = document.createElement('p')
@@ -94,6 +103,10 @@ feelingsForm.addEventListener('submit', function(e){
 makeCard(alongFace, ventingInput)
 e.target.reset()
 
+
+    const a = await emojiReference[face];
+    
+
     const container = document.querySelector('#new-feelings');
     
     const newCard = document.createElement('div');
@@ -106,27 +119,54 @@ e.target.reset()
     commentContainer.classList.add('card-comment');
 
     const ventingSubmit = document.createElement('p');
-
-    const a = await emojiReference[face];
     
-
     emojiNode.textContent = a;
     ventingSubmit.textContent = comment;
     commentContainer.appendChild(ventingSubmit);
     newCard.append(emojiNode, commentContainer);
 
     container.appendChild(newCard);
+
 });
+
+
+};
 
 feelingsForm.addEventListener('submit', function(e){
     e.preventDefault()
-
     const ventingInput = document.getElementById('venting').value
+
     const alongFace = document.querySelector('input[name="feeling"]:checked').value;
+
 
     makeCard(alongFace, ventingInput)
 
-    e.target.reset()
+    console.log(alongFace)
+
+    document.body.appendChild(container)
+
+    function storeCardInfo() {
+        const dbURL = 'http://localhost:3000/feelings'
+        const cardInfo = {
+            'emoji': alongFace,
+            'vent': ventingInput,
+        }
+        const configObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify(cardInfo),
+        }
+
+        fetch(dbURL, configObj);
+
+    }
+
+    storeCardInfo();
+
+    e.target.reset();
 
 
 })

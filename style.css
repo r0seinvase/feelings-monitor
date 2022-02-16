@@ -1,4 +1,5 @@
-* {Box-sizing: border-box
+* {
+    box-sizing: border-box
 }
 
 body::-webkit-scrollbar {
@@ -57,6 +58,8 @@ body::-webkit-scrollbar {
 #new-feelings{
     padding: 10px 0 0 20px;
     width: 33%;
+    height: 100vh;
+    overflow: scroll;;
 }
 
 .new-feeling-card{
