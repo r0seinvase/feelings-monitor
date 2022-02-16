@@ -69,6 +69,7 @@ emotionButtons.forEach(emotionButton => {
 const feelingsForm = document.getElementById('feelings-form')
 
 const makeCard = async (face, comment) => {
+
     const container = document.createElement('div')
     const ventingSubmit = document.createElement('p')
     const surpriseNode =document.createElement('p')
@@ -92,5 +93,40 @@ feelingsForm.addEventListener('submit', function(e){
 
 makeCard(alongFace, ventingInput)
 e.target.reset()
+
+    const container = document.querySelector('#new-feelings');
+    
+    const newCard = document.createElement('div');
+    newCard.classList.add('new-feeling-card');
+    
+    const emojiNode = document.createElement('div');
+    emojiNode.classList.add('card-emoji');
+    
+    const commentContainer = document.createElement('div');
+    commentContainer.classList.add('card-comment');
+
+    const ventingSubmit = document.createElement('p');
+
+    const a = await emojiReference[face];
+    
+
+    emojiNode.textContent = a;
+    ventingSubmit.textContent = comment;
+    commentContainer.appendChild(ventingSubmit);
+    newCard.append(emojiNode, commentContainer);
+
+    container.appendChild(newCard);
+});
+
+feelingsForm.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    const ventingInput = document.getElementById('venting').value
+    const alongFace = document.querySelector('input[name="feeling"]:checked').value;
+
+    makeCard(alongFace, ventingInput)
+
+    e.target.reset()
+
 
 })
