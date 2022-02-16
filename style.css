@@ -1,7 +1,12 @@
-body {
+* {Box-sizing: border-box
+}
+
+body::-webkit-scrollbar {
     height: 100vh;
     width: 100vw;
-    overflow: scroll;
+    overflow-y: none;
+    overflow-x: none;
+    display: none;
 }
 
 #container {
@@ -10,21 +15,26 @@ body {
 }
 
 .feelings-card {
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .card-title {
     text-align: center;
     font-size: 30px;
     font-family: sans-serif;
+    text-align:center;
 }
 
 .new-feelings-line {
     display: flex;
-    justify-content: auto;
-    ;
+    justify-content: space-evenly;
+    Text-align: center;
+    margin-bottom: 36px;
+    font-size: 30px;
+    
 }
 
 #venting {
@@ -32,13 +42,14 @@ body {
     border: 3px solid;
     top: 50%;
     left: 50%;
+    text-align: center;
 }
 
 #vent-input-container {
     display: flex;
     align-items: center;
+    text-align:center;
 }
-
 
 /* width: 0; 
   height: 0; 
@@ -50,6 +61,7 @@ body {
 
 #vent-speech-bubble {
     position: relative;
+    text-align:center;
 }
 
 /* #vent-speech-bubble:before {

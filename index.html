@@ -12,40 +12,54 @@
     <div id='container'>
         <div style = "position:relative; left:400px; top:150px; background-color:pink;">
         <div class="feelings-card">
-            <div class="card-title"style = "position:relative; top:-20px; left:60px; font-size:70px; font-family: 'Brush Script MT', cursive;">Feelings Monitor</div>
+            <div class="card-title" style = "position:flex-center; font-size:70px; font-family: 'Brush Script MT', cursive;">Feelings Monitor</div>
             <form id="feelings-form">
-                <div id="form-emoji">:)</div>
-                <div class="new-feelings-line" style = "position:relative; top:70px; left:200px; font-size:20px;">
+                <div class="new-feelings-line">
+                     <div id="form-emoji" style ="font-size: 70px;">:)</div>
+                     <div style="padding-top: 54px; padding-left: 57px;">
                     <input class="feelings-button" type="radio" id="happy" name="feeling" value="happy">
                     <label for="happy">HAPPY</label>
+                    </div>
                 </div>
-                <div class="new-feelings-line" style = "position:relative; top:80px; left:120px; font-size:20px;">
+                <div class="new-feelings-line" style = "Justify-content:space-between;">
+                <div>
                     <input class="feelings-button" type="radio" id="angry" name="feeling" value="angry">
                     <label for="angry">ANGRY</label>
-                    <input class="feelings-button" type="radio" id="sad" name="feeling" value="sad">
-                    <label for="sad">SAD</label>
+                    </div>
+                <div>
                     <input class="feelings-button" type="radio" id="disgusted" name="feeling" value="disgusted" >
                     <label for="disgusted">DISGUSTED</label>
                 </div>
-                <div class="new-feelings-line"style = "position:relative; top:90px; left:140px; font-size:20px;">
+                <div style="padding-right: 26px;">
+                    <input class="feelings-button" type="radio" id="sad" name="feeling" value="sad">
+                    <label for="sad">SAD</label>
+                </div>
+                </div>
+                <div class="new-feelings-line">
+                    <div>
                     <input class="feelings-button" type="radio" id="surprised" name="feeling" value="surprised">
                     <label for="surprised">SURPRISED</label>
+                   </div>
+                <div>
                     <input class="feelings-button" type="radio" id="excited" name="feeling" value="excited">
                     <label for="excited">EXCITED</label>
                 </div>
-                <div class="new-feelings-line" style = "position:relative; top:100px; left:200px; font-size:20px;">
+                </div>
+                <div class="new-feelings-line">
+                    <div>
                     <input class="feelings-button" type="radio" id="fearful" name="feeling" value="fearful">
                     <label for="fearful">FEARFUL</label>
+                    </div>
                 </div>
-                <div class="new-feelings-line" style = "position:relative; top:80px; white-space: nowrap;">
-                    <div id="vent-input-container"  style = "position:relative; top:100px;">
-                        <label for="venting" style="font-size:30px; position:relative; right:30px;">Vent Here:</label>
-                        <div id="comment-box" style="display: flexbox;">
+                <div class="new-feelings-line">
+                    <div id="vent-input-container"  style = "margin-top:100px; top:100px; display:flex; Align-items: center">
+                        <label for="venting" type="radio" name="order"  value="one" id="Vent" checked>Vent Here:</label>
+                        <div id="comment-box" type="radio" name="order"  value="two" id="comment"></div>
                             <textarea name="venting" id="venting" cols="30" rows="3" placeholder="All Ears..."></textarea>
+                            <input type="submit" value="Pour Your Heart Out"type="radio" name="order"  value="three" id="heart"></label>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Pour Your Heart Out" style = "position:relative; top:140px; left:430px;">
             </form>
         </div>
      </div>
