@@ -62,7 +62,6 @@ fetch('http://localhost:3000/feelings')
         })
     });
 
-
 const emotionButtons = document.querySelectorAll('.feelings-button');
 emotionButtons.forEach(emotionButton => {
     emotionButton.addEventListener('change', () => {
@@ -73,6 +72,12 @@ emotionButtons.forEach(emotionButton => {
     })
 })
 
+const emotionLabels = document.querySelectorAll('label');
+emotionLabels.forEach(emotionLabel => {
+    emotionLabel.addEventListener('mouseover', () => {
+        populateEmojiSpace(emojiReference[emotionLabel.htmlFor]);
+    })
+})
 
 const feelingsForm = document.getElementById('feelings-form')
 
