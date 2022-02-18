@@ -1,25 +1,11 @@
-# feelings-monitor fan-fic
+Feelings Monitor
 
-chapter-1
+This webpage was inspired mostly by the feelings Friday event, A teamwork started with a concept from Paola Moreno-Reyes.
 
-crop top lap top drop 
-top beebop beelock
-banana fana fo fana 
+Styled and designed by Wael Gomaa, and made it work by the very bright teammates Charlie Kozey and Michael Dally.
 
-chapter-2
+The webpage in a nutshell is an anonymous way of venting out, A way to express and collect your feelings over time
 
-ham fam lamb stamp skip hipdeedip
+Choose one of seven emotions that closely represents your mood and vent as much or as little as you want. 
 
-chapter-3
-Under the surface
-I feel berserk as a tightrope walker in a three-ring circus
-Under the surface
-Was Hercules ever like "Yo, I don't wanna fight Cerberus"?
-Under the surface
-I'm pretty sure I'm worthless if I can't be of service
-
-poerty by : your mum
-
-chapter-4
-
-Suddenly, a GIANT asteroid violently crashed into the planet and tragically destroyed everything. Finally, I woke up and it was all a dream!!!
+Tell us your sorrows and troubles, celebrate or share the happiness and love.
