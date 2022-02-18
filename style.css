@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
     text-align:center;
 }
 
-#new-feelings{
+#new-feelings {
     padding: 10px 0 0 20px;
     width: 33%;
     height: 100vh;
@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
 }
 
 .error-message{
-    color: red;
+    color: #990000;
     font-size: 24px;
     text-align: center;
     padding-right: 20px;

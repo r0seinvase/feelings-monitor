@@ -59,6 +59,11 @@
       "emoji": "disgusted",
       "vent": "bleh\n",
       "id": 12
+    },
+    {
+      "emoji": "fearful",
+      "vent": "fear",
+      "id": 13
     }
   ]
 }
