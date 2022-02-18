@@ -51,6 +51,17 @@ const populateEmojiSpace = async (face) => {
     const emojiSpace = document.getElementById('form-emoji');
     emojiSpace.textContent = a;
 };
+
+const resetEmojiSpace = async () => {
+    const neutralEmoji = await neutralFace
+    const emojiSpace = document.getElementById('form-emoji');
+    const checked =  document.querySelector('input[name="feeling"]:checked')
+    if(checked == null){
+        emojiSpace.textContent = neutralEmoji;
+    }else {
+        emojiSpace.textContent = await emojiReference[checked.value];
+    }
+}
   
 populateEmojiSpace(neutralFace);
 
@@ -67,15 +78,16 @@ emotionButtons.forEach(emotionButton => {
     emotionButton.addEventListener('change', () => {
         populateEmojiSpace(emojiReference[emotionButton.value]);
     })
-    emotionButton.addEventListener('mouseover', () => {
-        populateEmojiSpace(emojiReference[emotionButton.value]);
-    })
 })
+
 
 const emotionLabels = document.querySelectorAll('label');
 emotionLabels.forEach(emotionLabel => {
     emotionLabel.addEventListener('mouseover', () => {
         populateEmojiSpace(emojiReference[emotionLabel.htmlFor]);
+    })
+    emotionLabel.addEventListener('mouseleave', () => {
+        resetEmojiSpace();
     })
 })
 
@@ -83,35 +95,8 @@ const feelingsForm = document.getElementById('feelings-form')
 
 const makeCard = async (face, comment) => {
 
-
-    const container = document.createElement('div')
-    const ventingSubmit = document.createElement('p')
-    const surpriseNode =document.createElement('p')
     const a = await emojiReference[face];
     
-    surpriseNode.textContent = a;
-        ventingSubmit.textContent = comment
-    container.appendChild(ventingSubmit)
-            container.appendChild(surpriseNode)
-            document.body.appendChild(container)
-
-};
-
-feelingsForm.addEventListener('submit', function(e){
-    e.preventDefault()
-
-    const ventingInput = document.getElementById('venting').value
-
-
-    const alongFace = document.querySelector('input[name="feeling"]:checked').value;
-
-makeCard(alongFace, ventingInput)
-e.target.reset()
-
-
-    const a = await emojiReference[face];
-    
-
     const container = document.querySelector('#new-feelings');
     
     const newCard = document.createElement('div');
@@ -132,10 +117,9 @@ e.target.reset()
 
     container.appendChild(newCard);
 
-});
-
-
 };
+
+
 
 feelingsForm.addEventListener('submit', function(e){
     e.preventDefault()
@@ -146,9 +130,6 @@ feelingsForm.addEventListener('submit', function(e){
 
     makeCard(alongFace, ventingInput)
 
-    console.log(alongFace)
-
-    document.body.appendChild(container)
 
     function storeCardInfo() {
         const dbURL = 'http://localhost:3000/feelings'
@@ -171,7 +152,7 @@ feelingsForm.addEventListener('submit', function(e){
 
     storeCardInfo();
 
-    e.target.reset();
+        e.target.reset();
 
 
 })
