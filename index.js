@@ -82,7 +82,7 @@ emotionButtons.forEach(emotionButton => {
 })
 
 
-const emotionLabels = document.querySelectorAll('label');
+const emotionLabels = document.querySelectorAll('label.feeling-label');
 emotionLabels.forEach(emotionLabel => {
     emotionLabel.addEventListener('mouseover', () => {
         populateEmojiSpace(emojiReference[emotionLabel.htmlFor]);
