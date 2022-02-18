@@ -1,64 +1,19 @@
 {
   "feelings": [
     {
-      "emoji": "surprised",
-      "vent": "halp",
+      "emoji": "disgusted",
+      "vent": "my hands are so sweaty rn",
       "id": 1
     },
     {
       "emoji": "fearful",
-      "vent": "HALP",
+      "vent": "i'm about to present",
       "id": 2
     },
     {
-      "emoji": "happy",
-      "vent": "maybe this?",
+      "emoji": "excited",
+      "vent": "but we made a cool feelings monitor yay!",
       "id": 3
-    },
-    {
-      "emoji": "surprised",
-      "vent": "a new feeling",
-      "id": 4
-    },
-    {
-      "emoji": "angry",
-      "vent": "yet another feeling",
-      "id": 5
-    },
-    {
-      "emoji": "happy",
-      "vent": "yis",
-      "id": 6
-    },
-    {
-      "emoji": "sad",
-      "vent": "testing",
-      "id": 7
-    },
-    {
-      "emoji": "disgusted",
-      "vent": "whyyyyy",
-      "id": 8
-    },
-    {
-      "emoji": "happy",
-      "vent": "ok phew",
-      "id": 9
-    },
-    {
-      "emoji": "angry",
-      "vent": "angy",
-      "id": 10
-    },
-    {
-      "emoji": "sad",
-      "vent": "go",
-      "id": 11
-    },
-    {
-      "emoji": "disgusted",
-      "vent": "bleh\n",
-      "id": 12
     }
   ]
 }
