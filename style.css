@@ -94,6 +94,13 @@ body::-webkit-scrollbar {
     text-align:center;
 }
 
+.error-message{
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    padding-right: 20px;
+}
+
 /* #vent-speech-bubble:before {
     content: "";
     width: 0px;

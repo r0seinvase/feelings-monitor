@@ -71,7 +71,8 @@ fetch('http://localhost:3000/feelings')
         data.forEach(e => {
             makeCard(e.emoji, e.vent);
         })
-    });
+    })
+    .catch(error => handleError(error));
 
 const emotionButtons = document.querySelectorAll('.feelings-button');
 emotionButtons.forEach(emotionButton => {
@@ -156,3 +157,11 @@ feelingsForm.addEventListener('submit', function(e){
 
 
 })
+
+function handleError(error){
+    const container = document.querySelector('#new-feelings');
+    const errorMessage = document.createElement('p');
+    errorMessage.classList.add('error-message')
+    errorMessage.textContent = "Connect to the server to see all of our feelings pls 🙏"
+    container.appendChild(errorMessage)
+}
